@@ -1,0 +1,75 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Clear fix hack */
+  .clearfix:after {
+       content: ".";
+       display: block;
+       clear: both;
+       visibility: hidden;
+       line-height: 0;
+       height: 0;
+  }
+  
+  .clear {
+      clear: both;
+  }
+  
+  /******************************************
+  /* BASE STYLES
+  /*******************************************/
+  
+  body {
+    margin: 0;
+  }
+  .hero-image {
+    background-image: url(readingbible.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    color: #fff;
+  }
+  li #menu:nth-of-type(1) {
+    align-self: flex-start;
+    
+  }
+   
+  li {
+    padding: 15px 17px;
+    
+  }
+
+  .topSection {
+    width: 100%;
+    height: 600px;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+
+  /* Responsive style below */
+
+
+  
+  /******************************************
+  /* LAYOUT
+  /*******************************************/
+  header {
+  
+  }
+  
+  footer {
+  
+  }
+  
+  /******************************************
+  /* ADDITIONAL STYLES
+  /*******************************************/
+  
