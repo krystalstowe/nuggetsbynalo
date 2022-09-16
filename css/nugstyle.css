@@ -1,75 +1,192 @@
 /* Box Model Hack */
 * {
-    box-sizing: border-box;
-  }
-  
-  /* Clear fix hack */
-  .clearfix:after {
-       content: ".";
-       display: block;
-       clear: both;
-       visibility: hidden;
-       line-height: 0;
-       height: 0;
-  }
-  
-  .clear {
-      clear: both;
-  }
-  
-  /******************************************
-  /* BASE STYLES
-  /*******************************************/
-  
-  body {
-    margin: 0;
-  }
-  .hero-image {
-    background-image: url(readingbible.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    color: #fff;
-  }
-  li #menu:nth-of-type(1) {
-    align-self: flex-start;
-    
-  }
-   
-  li {
-    padding: 15px 17px;
-    
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  .topSection {
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background: #EBD6B0;
+  color: #333;
+  line-height: 1.6;
+}
+/* Navbar style */
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  line-height: 1em;
+}
+
+img {
+  width: 60px;
+  height: 60px;
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.5);
+  height: 60px;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  padding: 0 5px;
+  margin: 0 5px;
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 40px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+/* Image Slider Style */
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 600px;
-    margin-top: 0;
-    padding-top: 0;
-  }
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current {
+    opacity: 1;
+}
+
+.slide .content {
+    position: absolute;
+    bottom: 70px;
+    left: -600px;
+    opacity: 0;
+    width: 600px;
+    background: rgba(255, 255, 255, 0.75);
+    color: #333;
+    padding: 35px;
+}
+
+.slide .content h1 {
+    margin-bottom: 10px;
+}
+
+.slide.current .content{ 
+    opacity: 1;
+    transform: translateX(600px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+
+/* Buttons */
+
+.buttons button#next {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+}
+
+.buttons button#prev {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+}
+
+.buttons button {
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    padding: 13px 15px;
+    border-radius: 50%;
+    outline: none;
+}
+
+.buttons button:hover {
+    background-color: #fff;
+    color: #333;
+}
+/* Images */
+.slide:first-child {
+    background: url('./images/NWPNMConference3.jpg') no-repeat center center/contain;
+}
+.slide:nth-child(2) {
+    background: url('./images/raisedhand.jpg') no-repeat center center/cover;
+}
+.slide:nth-child(3) {
+    background: url('./images/readingbible.jpg') no-repeat center top/cover;
+}
+
+/* Responsive Style */
+
+@media(max-width: 500px) {
+    .slide .content {
+        bottom: -300px;
+        left: 0;
+        width: 100%;
+    }
+
+    .slide.current .content {
+        transform: translateY(-300px);
+    }
+}
 
 
-  /* Responsive style below */
 
 
-  
-  /******************************************
-  /* LAYOUT
-  /*******************************************/
-  header {
-  
-  }
-  
-  footer {
-  
-  }
-  
-  /******************************************
-  /* ADDITIONAL STYLES
-  /*******************************************/
-  
+footer {
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
