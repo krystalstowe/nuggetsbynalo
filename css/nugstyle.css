@@ -40,22 +40,25 @@ body {
 /* Navbar style */
 ul {
   list-style-type: none;
+  font-weight: bold;
+
 }
 
 a {
   text-decoration: none;
   color: #333;
-  line-height: 1em;
 }
 
 img {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
+  overflow: visible;
 }
 
 .navbar {
   background: rgba(255, 255, 255, 0.5);
   height: 60px;
+  width: 100vw;
 }
 
 .navbar ul {
@@ -63,10 +66,13 @@ img {
 }
 
 .navbar a {
-  padding: 0 5px;
+  padding: 5px;
   margin: 0 5px;
 }
 
+.navbar a:hover {
+  border-bottom: 2px #333 solid;
+}
 .navbar .flex {
   justify-content: space-between;
 }
@@ -81,7 +87,7 @@ img {
 .flex {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   height: 100%;
 }
 /* Image Slider Style */
@@ -157,13 +163,40 @@ img {
 }
 /* Images */
 .slide:first-child {
-    background: url('./images/NWPNMConference3.jpg') no-repeat center center/contain;
+    background: url('./images/NWPNMConference3.jpg') no-repeat center center/cover;
 }
 .slide:nth-child(2) {
     background: url('./images/raisedhand.jpg') no-repeat center center/cover;
 }
 .slide:nth-child(3) {
     background: url('./images/readingbible.jpg') no-repeat center top/cover;
+}
+
+/* Footer */
+
+footer {
+  height: 200px;
+  background: #717F9D;
+  color: #fff;
+}
+.footer ul{
+  color: #fff;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.social {
+  color: #fff;
+  padding: 10px;
 }
 
 /* Responsive Style */
@@ -181,11 +214,6 @@ img {
 }
 
 
-
-
-footer {
-
-}
 
 /******************************************
 /* ADDITIONAL STYLES
