@@ -59,10 +59,12 @@ img {
   background: rgba(255, 255, 255, 0.5);
   height: 60px;
   width: 100vw;
+  margin: 0;
 }
 
 .navbar ul {
   display: flex;
+  margin-bottom: 20px;
 }
 
 .navbar a {
@@ -172,17 +174,31 @@ img {
     background: url('./images/readingbible.jpg') no-repeat center top/cover;
 }
 
+/* Video Style */
+.container2 {
+  width: 100vw;
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 30px;
+}
+
+/* .video {
+  width: 200px;
+  height: 150px;
+} */
 /* Footer */
 
 footer {
+  padding-top: 50px;
   height: 200px;
   background: #717F9D;
   color: #fff;
 }
-.footer ul{
+.footer a{
   color: #fff;
 }
-.grid {
+.grid .grid-3{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -194,9 +210,9 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-.social {
-  color: #fff;
-  padding: 10px;
+.footer .social a {
+  margin: 0 10px;
+
 }
 
 /* Responsive Style */
